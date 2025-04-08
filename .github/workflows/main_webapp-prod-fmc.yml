@@ -25,7 +25,6 @@ jobs:
           npm install
           npm run build --if-present
           npm run test --if-present
-        working-directory: my-static-website
 
       - name: Zip artifact for deployment
         run: zip -r release.zip my-static-website/*
@@ -68,4 +67,5 @@ jobs:
         with:
           app-name: 'webapp-prod-fmc'
           slot-name: 'Production'
-          package: my-static-website
+          package: .
+          
