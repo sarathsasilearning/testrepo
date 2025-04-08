@@ -22,6 +22,8 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: '22.x'
+      - name: Navigate to my-static-website directory
+        run: cd my-static-website          
 
       - name: npm install, build, and test
         run: |
